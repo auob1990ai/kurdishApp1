@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: kurdtext
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: WHISPER_MODEL
+        value: small
+      - key: WHISPER_DEVICE
+        value: cpu
+      - key: WHISPER_COMPUTE
+        value: int8
